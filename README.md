@@ -46,3 +46,10 @@
 - 使用 ESM、严格类型检查和 `tsx` 开发运行环境
 - 添加 `dev` 与 `typecheck` 脚本
 - 完成首次提交并推送到远程仓库
+
+## 进度 2：完成第一次 AI 调用
+
+- 安装 OpenAI 官方 TypeScript SDK
+- 使用环境变量管理 API Key
+- 通过 Responses API 调用 `gpt-5.6`
+- 输出模型生成的文本结果
