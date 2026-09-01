@@ -1,55 +1,24 @@
 # AI Workspace
 
-## 目的
+pnpm + TypeScript monorepo，包含两个可独立运行的起始项目：
 
-这是一个长期持续演进的 AI 项目。
+- `apps/web`：Vite + 原生 TypeScript 前端（默认 http://localhost:3000）
+- `apps/api`：Node.js HTTP API（默认 http://localhost:3001）
 
-目标不是只做学习 Demo，而是从最简单的功能开始，逐步扩展成一个具备真实生产能力的 AI 应用。
+## 开始
 
-开发原则：
+```bash
+pnpm install
+pnpm dev
+```
 
-- 优先使用 TypeScript
-- 每次只增加一个小能力
-- 每个阶段都考虑后续扩展性
-- 不为了学习而写一次性代码
-- 先保证设计清晰，再逐步增加复杂度
-- 后续可以扩展到数据库、用户系统、RAG、Agent、MCP、Evals、监控、成本控制等生产能力
-- 每完成一步，只在本文档最后追加新的进度记录
-- 不修改之前的历史记录
+常用命令：
 
-## 我的背景
+```bash
+pnpm build
+pnpm typecheck
+pnpm --filter @ai-workspace/web dev
+pnpm --filter @ai-workspace/api dev
+```
 
-- 多年 Full-stack Engineer 经验
-- 主要语言：TypeScript
-- 不需要重点讲 JavaScript / React / Web 基础
-- 重点学习和实践 AI Application Engineering
-
-## 给 ChatGPT 的要求
-
-- 阅读本文档后，直接根据最后一条进度继续
-- 每次只推进一个小步骤
-- 优先给出简单但可扩展的设计
-- 重点解释 AI 相关的新知识
-- 不要一次规划太远
-- 涉及最新 API、SDK、模型能力时先查官方文档
-- 每完成一步，给我一段可以直接追加到本文档底部的 Markdown
-- 每次回复尽量简洁
-- 每次进度记录只记录关键信息
-- 每个代码操作，用注释简洁写下这步是做什么的
-
-# 进度记录
-
-## 进度 1：初始化项目
-
-- 创建 Git 仓库并使用 `main` 分支
-- 初始化 pnpm + TypeScript 项目
-- 使用 ESM、严格类型检查和 `tsx` 开发运行环境
-- 添加 `dev` 与 `typecheck` 脚本
-- 完成首次提交并推送到远程仓库
-
-## 进度 2：完成第一次 AI 调用
-
-- 安装 OpenAI 官方 TypeScript SDK
-- 使用环境变量管理 API Key
-- 通过 Responses API 调用 `gpt-5.6`
-- 输出模型生成的文本结果
+API 健康检查：`GET http://localhost:3001/health`
