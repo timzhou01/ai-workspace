@@ -2,8 +2,8 @@
 
 pnpm + TypeScript monorepo，包含两个可独立运行的起始项目：
 
-- `apps/web`：Vite + 原生 TypeScript 前端（默认 http://localhost:3000）
-- `apps/api`：Node.js HTTP API（默认 http://localhost:3001）
+- `projects/personal-hub/web`：React + TypeScript 前端（默认 http://localhost:3000）
+- `projects/personal-hub/api`：NestJS API（默认 http://localhost:3001）
 
 ## 开始
 

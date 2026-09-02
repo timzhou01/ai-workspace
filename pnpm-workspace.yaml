@@ -1,5 +1,6 @@
 packages:
-  - apps/*
+  - projects/*/api
+  - projects/*/web
 
 allowBuilds:
   esbuild: true
